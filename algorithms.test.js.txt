@@ -1,0 +1,6 @@
+// algorithms.test.js
+const { bfs } = require('./algorithms');
+test('BFS visits nodes correctly', () => {
+  const graph = { A: ['B', 'C'], B: ['A', 'D'], C: ['A', 'D'], D: ['B', 'C'] };
+  expect(bfs(graph, 'A')).toEqual(['A', 'B', 'C', 'D']);
+});
